@@ -1,6 +1,21 @@
 # 30DaysMapChallenge
 Day1: Points
 
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com" />
+  <script src="https://unpkg.com"></script>
+</head>
+<body>
+  <div id="map" style="height: 400px;"></div>
+  <script>
+    var map = L.map('map').setView([41.457298, 69.574387], 12); //41.457298,69.574387
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    L.marker([41.311084, 69.240562]).addTo(map).bindPopup('Привет из Узбекистана!').openPopup();
+  </script>
+</body>
+</html>
 my_map = folium.Map(location=[41.457298,69.574387],zoom_start=12)
 
 folium.Marker(location=[41.466548,69.580238],
